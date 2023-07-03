@@ -1,5 +1,5 @@
 import NavBar from '@/components/Navbar'
-import './globals.css'
+
 import { Inter } from 'next/font/google'
 import SideBar from '@/components/Sidebar'
 
@@ -18,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NavBar />
+        <div className="flex">
+        <SideBar />
         {children}
+        </div>
         </body>
     </html>
   )
