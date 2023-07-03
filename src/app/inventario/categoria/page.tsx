@@ -5,7 +5,6 @@ import TBody from '@/components/table/TBody'
 import React, { useState } from 'react'
 import Searchbar from '@/components/Serchbar'
 import { Accordion } from 'flowbite-react'
-import List from '@/components/List'
 import Listcategory from '@/components/Listcategory'
 
 const ListadoCategoria = () => {
@@ -26,7 +25,7 @@ const ListadoCategoria = () => {
                placeholder='Buscar...'
              />
             <table className='table table-xs table-pin-rows table-pin-cols w-5/6 mx-auto'>
-
+            <Head columnas={["","nombre","descripcion",]} />
             <TBody columnas={["nombre","descripcion"]} endpoint='categoria' searchQuery={searchQuery}/>
             </table>
         
@@ -41,10 +40,7 @@ const ListadoCategoria = () => {
       <Accordion.Content>
             <div className='grow mt-9'>
                 <div className='overflow-x-auto'>
-                   
-                <table className='table table-xs table-pin-rows table-pin-cols w-5/6 mx-auto'>
                 <Listcategory columnas={["nombre","descripcion"]} endpoint='categoria' searchQuery={searchQuery}/>
-                </table>
                 </div>
             </div> 
       </Accordion.Content>
@@ -61,9 +57,7 @@ const ListadoCategoria = () => {
             <div className='grow mt-9'>
                 <div className='overflow-x-auto'>
                    
-                <table className='table table-xs table-pin-rows table-pin-cols w-5/6 mx-auto'>
                     <Listcategory columnas={["nombre","descripcion"]} endpoint='categoria' searchQuery={searchQuery}/>
-                </table>
                 </div>
             </div> 
       </Accordion.Content>

@@ -25,8 +25,8 @@ const page = () => {
               placeholder="Buscar..."
             />
           <table className='table table-xs table-pin-rows table-pin-cols w-5/6 mx-auto'>
-            <Head columnas={["", "ID", "Nombre Cliente", "Fecha de nacimiento", "Dirección", "Correo electronico"]} />
-            <TBody columnas={["id", "nombreCliente", "fechaNacimiento", "direccion", "correoElectronico"]} endpoint='cliente' searchQuery={''} />
+            <Head columnas={["", "Nombre Cliente", "Fecha de nacimiento", "Dirección", "Correo electronico"]} />
+            <TBody columnas={["nombreCliente", "fechaNacimiento", "direccion", "correoElectronico"]} endpoint='cliente' searchQuery={''} />
           </table>
         </div>
       </div>

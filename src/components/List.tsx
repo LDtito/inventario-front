@@ -45,7 +45,19 @@ const List:FC <Props> = ({columnas, endpoint, searchQuery}) => {
           newCarrito[index].cantidad += 1;
           setCarrito(newCarrito);
         }
+    };
+
+    const decreaseQuantity = (entidad: Entidad) => {
+        setCarrito((prevCarrito) => {
+          const updatedCarrito = [...prevCarrito];
+          const index = updatedCarrito.findIndex((item) => item.id === entidad.id);
+          if (updatedCarrito[index].cantidad > 0) {
+            updatedCarrito[index].cantidad -= 1;
+          }
+          return updatedCarrito;
+        });
       };
+
 
     return (
         <>
@@ -81,6 +93,7 @@ const List:FC <Props> = ({columnas, endpoint, searchQuery}) => {
           setCarrito(carrito.filter((item) => item.id !== entidad.id))
         }
         addToCart={addToCart}
+        decreaseQuantity={decreaseQuantity}
       />
         </>
     )

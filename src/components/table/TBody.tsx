@@ -65,32 +65,39 @@ const handleDelete = (id: string) => {
  return (
    <>
    
-    <tbody>
-        {entidades && filteredEntidades.map((entidad) => (
-            <tr key={entidad['id']}>
-               {columnas.map((columna)=> (
-                <td key={entidad['id']+entidad[columna]}>{entidad[columna]}</td>
-                ))}
-                <td className='w-6'>
-                    <Link href={{
-                        pathname: "/inventario/"+endpoint+"/"+entidad['id'],
-                        
-                    }}>
-                       <FontAwesomeIcon icon="pencil-alt" />
-                    </Link>
-                </td>
-                <td>
-                <FontAwesomeIcon
-                  icon="trash"
-                  onClick={() => handleDelete(entidad['id'])}
-                  style={{ cursor: 'pointer' }}
-                />
-                </td>
-            </tr>
-        ))}     
-            <tr>
-            </tr>
-        </tbody>   
+   <tbody>
+  {entidades && filteredEntidades.map((entidad) => {
+
+    const path = entidad['precioUnitario'] || '/usuario.png';
+
+    return (
+      <tr key={entidad['id']}>
+        <td>
+          <img className='w-10 rounded-full' src={path} alt="" />
+        </td>
+        {columnas.map((columna)=> (
+          <td key={entidad['id']+entidad[columna]}>{entidad[columna]}</td>
+        ))}
+        <td className='w-6'>
+          <Link href={{
+            pathname: "/inventario/"+endpoint+"/"+entidad['id'],
+          }}>
+            <FontAwesomeIcon icon="pencil-alt" />
+          </Link>
+        </td>
+        <td>
+          <FontAwesomeIcon
+            icon="trash"
+            onClick={() => handleDelete(entidad['id'])}
+            style={{ cursor: 'pointer' }}
+          />
+        </td>
+      </tr>
+    );
+  })}
+  <tr></tr>
+</tbody>
+   
    </>
  )
 }

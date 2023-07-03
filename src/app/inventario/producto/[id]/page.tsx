@@ -79,11 +79,11 @@ const Page = ({ params }: { params: { id: string } })  => {
         <div className='h-96 w-4/6 mx-auto p-4 border-solid border-gray-300 border-2 rounded-xl  '>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Input id='id' label='' register={register} type='hidden'/>
-                <Input id='nombre' label='Nombre' register={register} type='text' />
-                <Input id='descripcion' label='Descripcion' register={register} type='text' />
-                <Input id='precioUnitario' label='Precio' register={register} type='number' />
-                <Input id='cantidad' label='Cantedidad' register={register} type='number' />
-                <Manytoone entity="categoria" control={control} register={register}/>
+                <Input id='nombre' label='Nombre' register={register} type='text' required/>
+                <Input id='descripcion' label='Descripcion' register={register} type='text' required/>
+                <Input id='precioUnitario' label='Precio' register={register} type='number' required/>
+                <Input id='cantidad' label='Cantididad' register={register} type='number' required/>
+                <Manytoone entity="categoria" control={control} register={register} />
                 <Button className="btn-sm my-2" type='submit' label='Guardar' />
                 {errors?.root?.server && <p>Form submit failed.</p>}
             </form>            

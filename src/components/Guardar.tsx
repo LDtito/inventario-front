@@ -16,7 +16,7 @@ const Button:FC <Props> = ({label, onClick=()=>{},type='button', className}) => 
         onClick={onClick}
         type={type}
     >{label}
-    </button>   
+    </button> 
    </>
  )
 }

@@ -26,7 +26,7 @@ const ListadoProducto = () => {
               placeholder="Buscar..."
             />
         <table className='table table-xs table-pin-rows table-pin-cols w-5/6 mx-auto'>
-            <Head columnas={["Nombre", "Descripción", "Precio", "Cantidad"]}/>
+            <Head columnas={["","Nombre", "Descripción", "Precio", "Cantidad"]}/>
             <TBody columnas={["nombre", "descripcion", "precioUnitario", "cantidad"]} endpoint='producto' searchQuery={searchQuery}/>
         </table>
         </div>

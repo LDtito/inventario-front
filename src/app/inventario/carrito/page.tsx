@@ -7,15 +7,17 @@ interface Props {
   carrito: Entidad[],
   removeFromCart: (entidad: Entidad) => void,
   addToCart: (entidad: Entidad) => void,
+  decreaseQuantity:(entidad: Entidad) => void
 }
 
-const Carrito: FC<Props> = ({ columnas, entidades, carrito = [], removeFromCart, addToCart }) => {
+const Carrito: FC<Props> = ({ columnas, entidades, carrito = [], removeFromCart, addToCart, decreaseQuantity }) => {
   const total = carrito.reduce((acc, entidad) => acc + Number(entidad.precioUnitario * entidad.cantidad), 0);
+
 
   return (
     <div className='grid justify-center'>
       <p className='flex justify-center text-center text-black'>
-        Carrito 
+        Carrito
         <span className='text-primary'>de compras</span>
       </p>
       {carrito.length === 0 ? (
@@ -42,25 +44,21 @@ const Carrito: FC<Props> = ({ columnas, entidades, carrito = [], removeFromCart,
                 <td>{entidad.descripcion}</td>
                 <td>{entidad.precioUnitario}</td>
                 <td>
-                  <div className='flex flex-row'>
-                    <div className="flex items-center space-x-2">
-                      <button
-                        className=""
-                        onClick={() => addToCart({ ...entidad, cantidad: entidad.cantidad + 1 })}
-                      >
-                        <img className='w-6' src="/slashCircle.svg" alt="" />
-                      </button>
-                      <div className='grow grid content-center w-10 justify-center'>
-                        <span>{entidad.cantidad}</span>
-                      </div>
-                      <button
-                        className=""
-                        onClick={() => addToCart({ ...entidad, cantidad: entidad.cantidad - 1 })}
-                        disabled={entidad.cantidad === 0}
-                      >
-                        <img className='w-6' src="/Union.svg" alt="" />
-                      </button>
-                    </div>
+                  <div className="flex items-center space-x-2">
+                    <button
+                      className=""
+                      onClick={() => addToCart({ ...entidad, cantidad:  + 1 })}
+                    >
+                      <img className='w-6' src="/Union.svg" alt="" />
+                    </button>
+                    <td>{entidad.cantidad}</td>
+                    <button
+                      className=""
+                      onClick={() => decreaseQuantity(entidad)}
+                      disabled={entidad.cantidad === 0}
+                    >
+                      <img className='w-6' src="/SlashCircle.svg" alt="" />
+                    </button>
                   </div>
                 </td>
                 <td>
@@ -71,7 +69,7 @@ const Carrito: FC<Props> = ({ columnas, entidades, carrito = [], removeFromCart,
           </tbody>
           <tfoot>
             <tr>
-              <td colSpan={columnas.length + 1}></td>
+              <td colSpan={columnas.length }></td>
               <td className='font-semibold tracking-widest opacity-60 text-indigo-800'>Total de la compra: {total}</td>
             </tr>
           </tfoot>
