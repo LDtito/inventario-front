@@ -8,7 +8,7 @@ const Home = () => {
       <div className='flex justify-center'>
         <img className='w-11/12 h-48 mt-2' src="/banner.avif" alt="" />
       </div>
-      <div className='w-[1280px] h-[450px] flex justify-end bottom-28'>
+      <div className='w-[1050px] h-[450px] flex justify-end bottom-28'>
         <div className='h-[430px] w-full flex justify-center'>
           <div className=' self-center grid grid-cols-3 gap-3 content-center justify-items-center  h-[300px] w-[1200px]'>
             <div className=" card w-50 h-80 bg-base-100 shadow-xl ml-3">

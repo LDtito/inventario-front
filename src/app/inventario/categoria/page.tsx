@@ -31,39 +31,6 @@ const ListadoCategoria = () => {
         
         </div>
     </div>
-    <div className='broder border-blue-700 flex justify-center mt-5'>
-    <Accordion className='w-[1000px]'>
-    <Accordion.Panel>
-      <Accordion.Title className='h-12'>
-        Martillos
-      </Accordion.Title>
-      <Accordion.Content>
-            <div className='grow mt-9'>
-                <div className='overflow-x-auto'>
-                <Listcategory columnas={["nombre","descripcion"]} endpoint='categoria' searchQuery={searchQuery}/>
-                </div>
-            </div> 
-      </Accordion.Content>
-    </Accordion.Panel>
-      </Accordion>
-    </div>
-    <div className='broder border-blue-700 flex justify-center mt-5 p-3'>
-    <Accordion className='w-[1000px]'>
-    <Accordion.Panel>
-      <Accordion.Title className='h-12'>
-        Taladros
-      </Accordion.Title>
-      <Accordion.Content>
-            <div className='grow mt-9'>
-                <div className='overflow-x-auto'>
-                   
-                    <Listcategory columnas={["nombre","descripcion"]} endpoint='categoria' searchQuery={searchQuery}/>
-                </div>
-            </div> 
-      </Accordion.Content>
-    </Accordion.Panel>
-      </Accordion>
-    </div>
     </div>
     )
 }
