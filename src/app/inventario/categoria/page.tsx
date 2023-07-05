@@ -15,7 +15,7 @@ const ListadoCategoria = () => {
         <img className='w-11/12 h-48 mt-2 shadow-md rounded-lg' src="/banner.avif" alt="" />
       </div>
         <div className='grow w-full'>
-        <Toolbar pathForm='inventario/categoria/0' pathList='inventario/categoria/' currentEntity={""} entityName='categoria'/>
+        <Toolbar pathForm='/inventario/categoria/0' pathList='/inventario/categoria/' currentEntity={""} entityName='categoria'/>
         <p className='text-center text-black'>Listado <span className='text-primary'>de categorias</span></p>
         <div className='overflow-x-auto'>
            <Searchbar

@@ -16,6 +16,8 @@ const Page = ({ params }: { params: { id: string } })  => {
     const [categoria, setcategoria] = useState({
         id: 0,
         nombre:'',
+        descripcion:'',
+
     });
     const { register, setValue,getValues,handleSubmit, formState: { errors }  } = useForm(
         {
@@ -34,8 +36,10 @@ const Page = ({ params }: { params: { id: string } })  => {
             
             if (data.id!=0){
                 setValue("id", data['id'])
-                setValue("nombre", data['name'])
+                setValue("nombre", data['nombre'])
+                setValue("descripcion",data["descripcion"])
                 setcategoria(data)
+                
             }
 
         } else {

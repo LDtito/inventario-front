@@ -39,7 +39,7 @@ export const Manytoone: FC<Props> = ({entity, control, register }) => {
                   }}
                 >
                     <option key={entity+0} value={0} >
-                            Seleccione un valor
+                           Herramientas electricas
                     </option>
                     {data?.map((item) => (
                         <option key={entity+item.id} value={item.id}>

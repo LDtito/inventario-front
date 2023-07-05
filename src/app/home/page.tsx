@@ -18,7 +18,7 @@ const Home = () => {
                   Destornilladores!
                   <div className="badge badge-primary">NUEVOS</div>
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p>Destornilladores estrella, de punta y planos</p>
                 <div className="card-actions justify-end">
                   <Link href={"/inventario/categoria"} className="badge badge-outline">ver mas</Link>
                   <div className="badge badge-outline">Products</div>
@@ -32,9 +32,9 @@ const Home = () => {
                   Martillos!
                   <div className="badge badge-primary">NUEVOS</div>
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p>Martillos de madera metal y acero</p>
                 <div className="card-actions justify-end">
-                  <div className="badge badge-outline">Fashion</div>
+                  <Link href={"/inventario/categoria"} className="badge badge-outline">ver mas</Link>
                   <div className="badge badge-outline">Products</div>
                 </div>
               </div>
@@ -46,9 +46,9 @@ const Home = () => {
                   Clavos!
                   <div className="badge badge-primary">NUEVOS</div>
                 </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p>Clavos de acero, tornillos y sin cabeza</p>
                 <div className="card-actions justify-end">
-                  <div className="badge badge-outline">Fashion</div>
+                  <Link href={"/inventario/categoria"} className="badge badge-outline">ver mas</Link>
                   <div className="badge badge-outline">Products</div>
                 </div>
               </div>

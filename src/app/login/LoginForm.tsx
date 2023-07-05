@@ -23,7 +23,7 @@ export const LoginForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control">
         <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text">Usuario</span>
         </label>
         <input 
             type="text" 
@@ -34,7 +34,7 @@ export const LoginForm = () => {
         </div>
         <div className="form-control">
         <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text">Contraseña</span>
         </label>
         <input 
             type="password" 
@@ -42,12 +42,10 @@ export const LoginForm = () => {
             className="input input-bordered"
             {...register("password")}
         />
-        <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-        </label>
+     
         </div>
         <div className="form-control mt-6">
-        <button type='submit' className="btn btn-primary">Login</button>
+        <button type='submit' className="btn btn-primary">Iniciar sesion</button>
         </div>    
     </form>
 

@@ -18,6 +18,7 @@ const Page = ({ params }: { params: { id: string } })  => {
         nombre:'',
         descripcion:'',
         precioUnitario:'',
+        cantidad:'',
         categoria:'',
     });
     const { register, setValue,getValues,handleSubmit, formState: { errors }  } = useForm(
@@ -40,6 +41,7 @@ const Page = ({ params }: { params: { id: string } })  => {
                 setValue("nombre", data['nombre'])
                 setValue("descripcion", data['descripcion'])
                 setValue("precioUnitario", data['precioUnitario'])
+                setValue("cantidad",data["cantidad"])
                 setValue("categoria", data['categoria'])
                 setproducto(data)
             }
@@ -82,7 +84,7 @@ const Page = ({ params }: { params: { id: string } })  => {
                 <Input id='nombre' label='Nombre' register={register} type='text' required/>
                 <Input id='descripcion' label='Descripcion' register={register} type='text' required/>
                 <Input id='precioUnitario' label='Precio' register={register} type='number' required/>
-                <Input id='cantidad' label='Cantididad' register={register} type='number' required/>
+                <Input id='cantidad' label='Cantidad' register={register} type='number' required/>
                 <Manytoone entity="categoria" control={control} register={register} />
                 <Button className="btn-sm my-2" type='submit' label='Guardar' />
                 {errors?.root?.server && <p>Form submit failed.</p>}
