@@ -18,6 +18,7 @@ const page = () => {
         <Toolbar pathForm='/inventario/cliente/0' pathList='/inventario/cliente/' currentEntity={""} entityName='cliente' />
         <p className='text-center text-black'>Listado <span className='text-primary'>de clientes</span></p>
         <div className='overflow-x-auto'>
+          
         <Searchbar
               value={searchQuery}
               onChange={setSearchQuery}

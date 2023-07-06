@@ -23,7 +23,7 @@ export const Toolbar: FC<Props> = ({
         <div className="flex flex-row items-start sm:items-center">
         <Link href={pathForm} >
           <button className="my-2 mr-3 font-bold rounded btn btn-outline btn-sm group">
-              <svg className="w-3 h-3 mr-1 group-hover:animate-bounce group-hover:fill-white"
+              <svg className="w-3 h-3 mr-1 group-hover:animate-bounzce group-hover:fill-white"
                   xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1"
                   viewBox="0 0 512 512" xmlSpace="preserve">
                   <g>

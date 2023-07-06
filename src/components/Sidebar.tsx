@@ -37,7 +37,43 @@ const SideBar: FC<Props> = () => {
                 </li>
                 <li className='h-16'>
                     <Link href={'/inventario/cliente'}>
-                        <img src="/usuario.png" alt="" width={30} height={35} />
+                        <img src="/cliente.png" alt="" width={35} height={35} />
+                        Clientes
+                    </Link>
+                </li>
+                <li className='h-16 '>
+                    <Link href={'/inventario/ciudad'} className=''>
+                        <img src="/ciudades.png" alt="" width={35} height={35} />
+                        Ciudades
+                    </Link>
+                </li>
+                <li className='h-16 '>
+                    <Link href={'/inventario/compania'} className=''>
+                        <img src="/compania.png" alt="" width={30} height={30} />
+                        Companias
+                    </Link>
+                </li>
+                <li className='h-16 '>
+                    <Link href={'/inventario/proveedor'} className=''>
+                        <img src="/proveedor.png" alt="" width={30} height={30} />
+                        Proveedores
+                    </Link>
+                </li>
+                <li className='h-16 '>
+                    <Link href={'/inventario/reabastecimiento'} className=''>
+                        <img src="/rebastecimiento.png" alt="" width={30} height={30} />
+                        Reabastecimiento
+                    </Link>
+                </li>
+                <li className='h-16 '>
+                    <Link href={'/inventario/rol'} className=''>
+                        <img src="/rol.jpg" alt="" width={30} height={30} />
+                        Rol
+                    </Link>
+                </li>
+                <li className='h-16 '>
+                    <Link href={'/inventario/usuario'} className=''>
+                        <img src="/usuariooo.png" alt="" width={30} height={30} />
                         Usuarios
                     </Link>
                 </li>
